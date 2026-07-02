@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firaol Dugassa | Software Engineer & Mobile Architect</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+
+     <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="preloader" id="preloader" aria-hidden="true">
+        <div class="preloader__spinner" role="progressbar" aria-label="Loading page content"></div>
+    </div>
+    
+    <header class="header" id="header">
+        <div class="header__container">
+            <a href="#" class="header__logo" aria-label="Firaol Dugassa Home">
+                <span>Firaol</span>.Dev
+            </a>
+            
+            <nav class="nav" id="nav-menu" aria-label="Main Navigation">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#about" class="nav__link nav__link--active">About</a></li>
+                    <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+                    <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle Theme">
+                    <svg class="theme-toggle__icon icon-sun" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    <svg class="theme-toggle__icon icon-moon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                </button>
+                <button class="burger" id="burger-menu" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                    <span class="burger__line"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+     <main id="main-content">
+        <section class="hero section" id="hero">
+            <div class="hero__container container">
+                <div class="hero__content">
+                    <span class="hero__subtitle scroll-reveal">Hi, my name is</span>
+                    <h1 class="hero__title scroll-reveal">Firaol Dugassa.</h1>
+                    <h2 class="hero__dynamic scroll-reveal">I build <span class="typing-text" data-words='["Scalable Microservices", "Robust Mobile Architectures", "High-Performance Cloud Systems"]'></span></h2>
+                    <p class="hero__description scroll-reveal">
+                        I am an expert Software Engineer and Mobile Architect holding an BSc in Computer Science. I construct enterprise SaaS platforms and highly performant architectures using Node.js, Spring Boot, and Flutter.
+                    </p>
+                    <div class="hero__actions scroll-reveal">
+                        <a href="#projects" class="btn btn--primary ripple">View My Work</a>
+                        <a href="#contact" class="btn btn--secondary ripple">Let's Connect</a>
+                    </div>
+                </div>
+                <div class="hero__visual scroll-reveal">
+                    <div class="hero__blob"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats section">
+            <div class="stats__container container grid">
+                <div class="stat-card">
+                    <h3 class="stat-card__number" data-target="8">0</h3>
+                    <p class="stat-card__label">Years Professional Experience</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-card__number" data-target="45">0</h3>
+                    <p class="stat-card__label">Production Apps Deployed</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-card__number" data-target="99">0</h3>
+                    <p class="stat-card__label">% Client Satisfaction Rate</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-card__number" data-target="12">0</h3>
+                    <p class="stat-card__label">Open Source Packages</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about section" id="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about__grid grid">
+                    <div class="about__text scroll-reveal">
+                        <p>Driven by rigorous software engineering fundamentals, I am passionate about crafting distributed cloud ecosystems and multi-platform applications that operate flawlessly under massive load. I focus on clean architecture, domain-driven design, and robust code quality.</p>
+                        <p>When I'm not designing microservice meshes or refining mobile state machines, I engineer automation layers and build developer tooling aimed at reducing structural overhead.</p>
+                        <div class="about__meta">
+                            <a href="assets/resume.pdf" download class="btn btn--primary ripple">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:8px; vertical-align:middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4M7 10l5 5 5-5M12 15V3"/></svg>
+                                Download Complete CV
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills section" id="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Expertise</h2>
+                
+                <div class="skills__grid grid">
+                    <div class="skills__bars scroll-reveal">
+                        <h3 class="skills__subtitle">Core Engineering Competencies</h3>
+                        
+                        <div class="skill-bar">
+                            <div class="skill-bar__info">
+                                <span class="skill-bar__name">System Architecture & Clean Design</span>
+                                <span class="skill-bar__percentage">95%</span>
+                            </div>
+                            <div class="skill-bar__progress"><div class="skill-bar__fill" data-progress="95%"></div></div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-bar__info">
+                                <span class="skill-bar__name">Backend Systems (Node.js / Spring Boot)</span>
+                                <span class="skill-bar__percentage">90%</span>
+                            </div>
+                            <div class="skill-bar__progress"><div class="skill-bar__fill" data-progress="90%"></div></div>
+                        </div>
+
+                        <div class="skill-bar">
+                            <div class="skill-bar__info">
+                                <span class="skill-bar__name">Mobile Architecture (Flutter / Riverpod)</span>
+                                <span class="skill-bar__percentage">92%</span>
+                            </div>
+                            <div class="skill-bar__progress"><div class="skill-bar__fill" data-progress="92%"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="skills__stack scroll-reveal">
+                        <h3 class="skills__subtitle">Verified Tech Stack</h3>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">Dart</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">AWS</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">Prisma</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects section" id="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                
+                <div class="portfolio__filters" role="tablist" aria-label="Project Filters">
+                    <button class="filter-btn filter-btn--active" role="tab" aria-selected="true" data-filter="all">All Ecosystems</button>
+                    <button class="filter-btn" role="tab" aria-selected="false" data-filter="mobile">Mobile Applications</button>
+                    <button class="filter-btn" role="tab" aria-selected="false" data-filter="web">Web & PWA Platforms</button>
+                    <button class="filter-btn" role="tab" aria-selected="false" data-filter="automation">Automation & Tooling</button>
+                </div>
+
+                <div class="projects__grid grid" id="projects-container">
+                    
+                    <article class="project-card" data-category="mobile">
+                        <div class="project-card__image-wrapper">
+                            <div class="project-card__placeholder-img">MaSchool System</div>
+                            <span class="project-card__badge">In Production</span>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">MaSchool Platform</h3>
+                            <p class="project-card__desc">A nationwide e-learning environment built for Ethiopian Grade 12 students. Features advanced exam simulation engines, complex LaTeX mathematical styling rendering, and video metadata delivery.</p>
+                            <div class="project-card__specs">
+                                <strong>Challenge Solved:</strong> Engineered zero-lag client parsing pipelines for over 10,000 algorithmic mathematical JSON items.
+                            </div>
+                            <div class="project-card__tags">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Riverpod</span>
+                                <span class="tech-tag">LaTeX Engine</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://github.com" class="project-card__link" target="_blank" rel="noopener">GitHub</a>
+                                <a href="https://demo.com" class="project-card__link project-card__link--live" target="_blank" rel="noopener">Live System</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <div class="project-card__image-wrapper">
+                            <div class="project-card__placeholder-img">Ma'ed Cafe Platform</div>
+                            <span class="project-card__badge">Completed</span>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">Ma'ed Management Suite</h3>
+                            <p class="project-card__desc">A production-grade progressive web app (PWA) solution designed for high-volume cafe and restaurant management. Incorporates real-time customer multi-device ordering, synchronized chef displays, and comprehensive administrative oversight.</p>
+                            <div class="project-card__specs">
+                                <strong>Challenge Solved:</strong> Formulated state isolation systems using Prisma to secure distributed web socket mutations during peak order traffic.
+                            </div>
+                            <div class="project-card__tags">
+                                <span class="tech-tag">Prisma</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Node.js</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://github.com" class="project-card__link" target="_blank" rel="noopener">GitHub</a>
+                                <a href="https://demo.com" class="project-card__link project-card__link--live" target="_blank" rel="noopener">Live PWA</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="automation">
+                        <div class="project-card__image-wrapper">
+                            <div class="project-card__placeholder-img">automate-gitHub</div>
+                            <span class="project-card__badge">Stable</span>
+                        </div>
+                        <div class="project-card__content">
+                            <h3 class="project-card__title">automate-gitHub CLI</h3>
+                            <p class="project-card__desc">An optimized Python command-line utility specialized to programmatically initialize local tracking infrastructure, construct clean git configurations, and secure backups to modern cloud repositories.</p>
+                            <div class="project-card__specs">
+                                <strong>Challenge Solved:</strong> Eliminated asynchronous locking race conditions across local operating system shells.
+                            </div>
+                            <div class="project-card__tags">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Git Core API</span>
+                                <span class="tech-tag">Automation</span>
+                            </div>
+                            <div class="project-card__links">
+                                <a href="https://github.com" class="project-card__link" target="_blank" rel="noopener">GitHub Source</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="experience section" id="experience">
+            <div class="container">
+                <h2 class="section-title">Professional Milestones</h2>
+                <div class="timeline">
+                    
+                    <div class="timeline__item scroll-reveal">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2024 - Present</span>
+                            <h3 class="timeline__title">Senior Software Architect & Founder</h3>
+                            <h4 class="timeline__company">Enterprise Tech Solutions Corporation</h4>
+                            <p>Spearheading the engineering of high-availability SaaS platforms and complex cross-platform application architectures. Directing deployment targets via Docker, AWS cloud setups, and microservice meshes.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline__item scroll-reveal">
+                        <div class="timeline__marker"></div>
+                        <div class="timeline__content">
+                            <span class="timeline__date">2021 - 2024</span>
+                            <h3 class="timeline__title">Lead Mobile Solutions Engineer</h3>
+                            <h4 class="timeline__company">Global Mobile Development Firm</h4>
+                            <p>Designed and managed feature-first Clean Architecture systems within highly responsive applications using Flutter and Riverpod. Optimized memory allocation profiles by up to 35% across legacy builds.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="services section" id="services">
+            <div class="container">
+                <h2 class="section-title">Engineering Services</h2>
+                <div class="services__grid grid">
+                    <div class="service-card scroll-reveal">
+                        <h3 class="service-card__title">Enterprise Architecture</h3>
+                        <p class="service-card__desc">Building fault-tolerant backend infrastructures with Node.js and Spring Boot, utilizing microservices and clean domain structures for high scalability.</p>
+                    </div>
+                    <div class="service-card scroll-reveal">
+                        <h3 class="service-card__title">Cross-Platform Mobile Engineering</h3>
+                        <p class="service-card__desc">Architecting robust Flutter environments powered by state-of-the-art state engines (Riverpod, GetX) to maximize code reuse without sacrificing performance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials section">
+            <div class="container">
+                <h2 class="section-title">Endorsements</h2>
+                <div class="testimonials__grid grid scroll-reveal">
+                    <blockquote class="testimonial">
+                        <p class="testimonial__text">"Firaol's approach to deep system design is outstanding. He transformed our messy mobile client into a clean architecture masterpiece."</p>
+                        <cite class="testimonial__author">— Director of Technology, Enterprise Solutions</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact section" id="contact">
+            <div class="container">
+                <h2 class="section-title">Initiate Transmission</h2>
+                <div class="contact__grid grid">
+                    <form class="contact__form form scroll-reveal" id="contact-form" autocomplete="off">
+                        <div class="form__group">
+                            <label for="form-name" class="form__label">Full Name / Corporate Entity</label>
+                            <input type="text" id="form-name" name="name" class="form__input" placeholder="Your Name" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="form-email" class="form__label">Secure Email Address</label>
+                            <input type="email" id="form-email" name="email" class="form__input" placeholder="you@domain.com" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="form-message" class="form__label">Project Brief / Objectives</label>
+                            <textarea id="form-message" name="message" class="form__input form__input--textarea" placeholder="Describe the scope of work..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary ripple">Transmit Inquiry</button>
+                        <div class="form__status" id="form-status" role="alert" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container container grid">
+            <p class="footer__copy">&copy; 2026 Firaol Dugassa. All rights architectural and intellectual reserved.</p>
+            <div class="footer__socials">
+                <a href="https://github.com" class="footer__social-link" target="_blank" rel="noopener" aria-label="GitHub Developer Profile">GitHub</a>
+                <a href="https://linkedin.com" class="footer__social-link" target="_blank" rel="noopener" aria-label="LinkedIn Professional Network">LinkedIn</a>
+                <a href="https://github.com" class="footer__social-link" target="_blank" rel="noopener" aria-label="GitHub Developer Profile">Telegram</a>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top of page" aria-hidden="true">&#8593;</button>
+
+</body>
+</html>
