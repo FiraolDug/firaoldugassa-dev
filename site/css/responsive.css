@@ -1,0 +1,94 @@
+/* ==========================================================================
+   Responsive — desktop-first overrides down to small mobile.
+   Breakpoints: 1080 (small desktop/laptop), 900 (tablet), 720 (large phone),
+   560 (phone), 380 (small phone)
+   ========================================================================== */
+
+/* ---- 1080px: tighten layout, still multi-column ---- */
+@media (max-width: 1080px) {
+  :root { --header-h: 72px; }
+  .hero__grid { grid-template-columns: 1fr; }
+  .console { max-width: 560px; }
+  .about__side { position: static; }
+  .gh-console { grid-template-columns: 1fr; }
+  .contact__grid { grid-template-columns: 1fr; }
+}
+
+/* ---- 900px: tablets ---- */
+@media (max-width: 900px) {
+  .nav { position: fixed; inset: var(--header-h) 0 0 0; z-index: 1900;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: var(--ink-raised);
+    border-top: 1px solid var(--border);
+    padding: 1.5rem var(--gutter) 2rem;
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease), visibility var(--dur);
+    overflow-y: auto;
+  }
+  .nav--open { opacity: 1; transform: translateY(0); visibility: visible; pointer-events: auto; }
+  .nav__list { flex-direction: column; align-items: flex-start; gap: 0; width: 100%; }
+  .nav__list li { width: 100%; border-bottom: 1px solid var(--border); }
+  .nav__link { display: block; padding: 1rem 0.2rem; font-size: 1.02rem; }
+  .nav__link::after { display: none; }
+  .burger { display: flex; }
+
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .about__grid { grid-template-columns: 1fr; }
+  .skills__grid { grid-template-columns: 1fr; }
+  .projects__grid { grid-template-columns: repeat(2, 1fr); }
+  .certs__grid { grid-template-columns: 1fr; }
+}
+
+/* ---- 720px: large phones / small tablets ---- */
+@media (max-width: 720px) {
+  .section { padding-block: clamp(3.25rem, 10vw, 4.5rem); }
+  .section-head--spread { align-items: flex-start; }
+  .hero { min-height: auto; padding-block: 2.5rem 3.5rem; }
+  .hero__actions .btn { flex: 1 1 auto; }
+  .hero__scroll-cue { display: none; }
+  .projects__grid { grid-template-columns: 1fr; }
+  .gh-profile__stats { grid-template-columns: repeat(3, 1fr); }
+  .timeline { padding-left: 1.4rem; }
+  .timeline-item { padding: 1.1rem 1.1rem; }
+  .timeline-item::before { left: -1.4rem; }
+}
+
+/* ---- 560px: phones ---- */
+@media (max-width: 560px) {
+  :root { --header-h: 64px; }
+  .container { padding-inline: 1.1rem; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat { padding: 1.25rem 1rem; }
+  .hero__actions { flex-direction: column; }
+  .hero__actions .btn { width: 100%; }
+  .hero__meta { gap: 0.5rem 0.8rem; }
+  .filter-bar { flex-wrap: wrap; }
+  .contact-card, .form { padding: 1.35rem; }
+  .footer__container { flex-direction: column; text-align: center; }
+  .back-to-top { width: 2.65rem; height: 2.65rem; }
+  .console__body { padding: 1.1rem; }
+}
+
+/* ---- 380px: small phones ---- */
+@media (max-width: 380px) {
+  .hero__name { font-size: clamp(2.1rem, 10vw, 2.6rem); }
+  .header__brand-text { display: none; }
+  .btn { padding: 0.8rem 1rem; font-size: 0.87rem; white-space: normal; text-align: center; }
+  .gh-profile__stats { grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; }
+}
+
+/* ---- Fine pointer / hover-capable devices only: enable hover lifts ---- */
+@media (hover: none) {
+  .project-card:hover { transform: none; }
+  .btn:hover { transform: none; }
+}
+
+/* ---- Print ---- */
+@media print {
+  .header, .back-to-top, .preloader, .theme-toggle, .burger, .hero__scroll-cue { display: none !important; }
+  body { background: #fff; color: #000; }
+}

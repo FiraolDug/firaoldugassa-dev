@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Design tokens — "systems console" visual language
+   Dark, blueprint-inspired navy with a signal-amber accent and a cyan
+   secondary, referencing monitoring dashboards & terminal output.
+   ========================================================================== */
+:root {
+  /* --- Color: dark (default) --- */
+  --ink: #070b14;
+  --ink-raised: #0d1424;
+  --surface: #0f1830;
+  --surface-hover: #14203d;
+  --surface-strong: #182548;
+  --border: rgba(148, 163, 196, 0.14);
+  --border-strong: rgba(148, 163, 196, 0.28);
+  --text: #eef2fb;
+  --text-muted: #93a0bd;
+  --text-dim: #5d6a8a;
+
+  --amber: #f2b134;
+  --amber-strong: #ffce6b;
+  --amber-soft: rgba(242, 177, 52, 0.14);
+  --cyan: #5fd4d4;
+  --cyan-soft: rgba(95, 212, 212, 0.14);
+  --good: #3ddc97;
+  --warn: #f2545b;
+
+  --shadow-sm: 0 8px 24px rgba(3, 6, 16, 0.35);
+  --shadow-lg: 0 32px 80px rgba(3, 6, 16, 0.55);
+  --ring: 0 0 0 3px rgba(242, 177, 52, 0.35);
+
+  --radius-xs: 8px;
+  --radius-sm: 14px;
+  --radius-md: 20px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 160ms;
+  --dur: 280ms;
+  --dur-slow: 520ms;
+
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  --container: 1240px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --header-h: 76px;
+}
+
+[data-theme='light'] {
+  --ink: #f5f6fb;
+  --ink-raised: #ffffff;
+  --surface: #ffffff;
+  --surface-hover: #eef1fa;
+  --surface-strong: #ffffff;
+  --border: rgba(15, 23, 42, 0.10);
+  --border-strong: rgba(15, 23, 42, 0.18);
+  --text: #0b1220;
+  --text-muted: #4b5673;
+  --text-dim: #7a86a3;
+
+  --amber: #b3720b;
+  --amber-strong: #8f5b06;
+  --amber-soft: rgba(179, 114, 11, 0.10);
+  --cyan: #0d8f8f;
+  --cyan-soft: rgba(13, 143, 143, 0.10);
+  --good: #0f9d63;
+  --warn: #d13b42;
+
+  --shadow-sm: 0 8px 24px rgba(15, 23, 42, 0.06);
+  --shadow-lg: 0 32px 70px rgba(15, 23, 42, 0.10);
+}

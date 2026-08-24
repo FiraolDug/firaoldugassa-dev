@@ -1,0 +1,41 @@
+<svg width="900" height="1100" viewBox="0 0 900 1100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Abstract monogram portrait for Firaol Dugassa">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1424"/>
+      <stop offset="1" stop-color="#070b14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.7" cy="0.18" r="0.55">
+      <stop offset="0" stop-color="#f2b134" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#f2b134" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="pgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="1100" rx="40" fill="url(#pbg)"/>
+  <rect width="900" height="1100" rx="40" fill="url(#pgrid)"/>
+  <rect width="900" height="1100" rx="40" fill="url(#glow)"/>
+
+  <circle cx="450" cy="430" r="230" fill="none" stroke="#f2b134" stroke-opacity="0.25" stroke-width="2"/>
+  <circle cx="450" cy="430" r="190" fill="#0f1830" stroke="#f2b134" stroke-opacity="0.5" stroke-width="3"/>
+
+  <text x="450" y="465" text-anchor="middle" font-family="'Space Grotesk','Inter',Arial,sans-serif" font-size="150" font-weight="700" fill="#eef2fb">FD</text>
+
+  <g stroke="#5fd4d4" stroke-opacity="0.55" stroke-width="2" fill="none">
+    <circle cx="450" cy="430" r="260" stroke-dasharray="2 14" stroke-linecap="round"/>
+  </g>
+
+  <g font-family="'JetBrains Mono', monospace" fill="#93a0bd" font-size="20">
+    <rect x="130" y="740" width="640" height="230" rx="20" fill="#0d1424" stroke="#1c2947" stroke-width="1"/>
+    <text x="164" y="792" fill="#f2b134" letter-spacing="2">// role</text>
+    <text x="164" y="826" fill="#eef2fb" font-size="26" font-weight="700" font-family="'Space Grotesk',sans-serif">Software Engineer</text>
+    <text x="164" y="866" fill="#5fd4d4" letter-spacing="2">// stack</text>
+    <text x="164" y="898" fill="#c3cbe0" font-size="19">Flutter &#183; Node.js &#183; Spring Boot &#183; Python</text>
+    <text x="164" y="936" fill="#5d6a8a" font-size="17">Addis Ababa, Ethiopia &#8226; UTC+3</text>
+  </g>
+
+  <g>
+    <circle cx="700" cy="200" r="7" fill="#3ddc97"/>
+    <circle cx="700" cy="200" r="14" fill="#3ddc97" fill-opacity="0.25"/>
+  </g>
+</svg>
