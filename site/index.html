@@ -67,6 +67,7 @@
   </div>
 
   <header class="header" id="header">
+    <div class="header__blur" aria-hidden="true"></div>
     <div class="container header__container">
       <a class="header__brand" href="#hero" aria-label="Firaol Dugassa — home">
         <span class="header__brand-mark">FD</span>
@@ -276,6 +277,344 @@
   <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top" aria-hidden="true">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m6 15 6-6 6 6"/></svg>
   </button>
+
+  <script type="application/json" id="site-content-data">
+{
+  "site": {
+    "title": "Firaol Dugassa — Software Engineer",
+    "shortName": "Firaol",
+    "domain": "firaol.dev"
+  },
+  "navigation": [
+    { "label": "About", "href": "#about" },
+    { "label": "Skills", "href": "#skills" },
+    { "label": "Projects", "href": "#projects" },
+    { "label": "GitHub", "href": "#github" },
+    { "label": "Experience", "href": "#experience" },
+    { "label": "Contact", "href": "#contact" }
+  ],
+  "hero": {
+    "eyebrow": "// backend-focused full-stack developer",
+    "greeting": "Hi, I'm",
+    "name": "Firaol Dugassa",
+    "roleStatic": "I build",
+    "typingWords": ["Java & Spring Boot backends.", "cross-platform Flutter apps.", "digital savings platforms.", "internal company tools."],
+    "description": "Backend-focused full-stack developer based in Addis Ababa, specializing in Java and Spring Boot, with additional experience in Node.js/Express and Flutter for cross-platform mobile development.",
+    "location": "Addis Ababa, Ethiopia",
+    "availability": "Open to backend, mobile & full-stack roles",
+    "actions": [
+      { "label": "View projects", "href": "#projects", "variant": "primary" },
+      { "label": "Download resume", "href": "assets/resume/Firaol_Dugassa_Resume.pdf", "variant": "secondary", "download": true },
+      { "label": "Get in touch", "href": "#contact", "variant": "ghost" }
+    ],
+    "socials": [
+      { "label": "GitHub", "href": "https://github.com/FiraolDug", "icon": "github" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/firaol-dugassa-dev84a913369", "icon": "linkedin" },
+      { "label": "Telegram", "href": "https://t.me/firaol_dugassa", "icon": "telegram" },
+      { "label": "Email", "href": "mailto:firaoldugassalikassa@gmail.com", "icon": "mail" }
+    ],
+    "console": {
+      "label": "system.status",
+      "status": "OPERATIONAL",
+      "metrics": [
+        { "label": "Primary stack", "value": "Java · Spring Boot" },
+        { "label": "Also using", "value": "Node.js · Flutter" },
+        { "label": "Based in", "value": "Addis Ababa (UTC+3)" },
+        { "label": "Response time", "value": "< 24h" }
+      ],
+      "log": [
+        "$ whoami",
+        "firaol — full-stack developer",
+        "$ status --check",
+        "available for new projects"
+      ]
+    }
+  },
+  "stats": [
+    { "value": 2, "suffix": "", "label": "Live production systems built" },
+    { "value": 8, "suffix": "", "label": "Projects built end-to-end" },
+    { "value": 3, "suffix": "", "label": "Core stacks — Java/Spring Boot, Node.js, Flutter" },
+    { "value": 1, "suffix": "", "label": "Full-time engineering role, current" }
+  ],
+  "github": {
+    "username": "FiraolDug",
+    "eyebrow": "// live from github",
+    "title": "Straight from the source",
+    "description": "This panel pulls live data from the GitHub API — repositories, languages, and recent activity, refreshed on every visit.",
+    "fallback": {
+      "repos": "18",
+      "followers": "7",
+      "stars": "2",
+      "note": "Showing a cached summary from FiraolDug's GitHub profile — live data loads automatically once this site is hosted online with an active internet connection."
+    }
+  },
+  "about": {
+    "eyebrow": "// about",
+    "title": "Engineering with clarity, scale, and care.",
+    "paragraphs": [
+      "I'm a backend-focused full-stack developer specializing in Java and Spring Boot, with additional experience in Node.js/Express for backend work and Flutter for cross-platform mobile apps. I care about clear domain models, dependable APIs, and code the next engineer won't have to fight with.",
+      "At Ashara Software and ICT Solutions, I've built and shipped two systems currently in production use: Mesob Equb, a digital rotating-savings platform, and Ashara Task Manager, the company's internal workflow tool."
+    ],
+    "highlights": [
+      { "title": "Backend-first", "detail": "Specializing in Java and Spring Boot for secure, database-driven applications and RESTful APIs." },
+      { "title": "Shipped, not just built", "detail": "Mesob Equb and Ashara Task Manager are both live and in active daily use." },
+      { "title": "Full lifecycle", "detail": "Comfortable from API design and database schemas through deployment." }
+    ],
+    "focus": {
+      "title": "What I care about",
+      "description": "Clean architecture, reliable foundations, and systems that hold up once real people depend on them."
+    },
+    "resumeHref": "assets/resume/Firaol_Dugassa_Resume.pdf",
+    "resumeLabel": "Download resume (PDF)"
+  },
+  "skills": {
+    "eyebrow": "// skills",
+    "title": "A toolkit built for shipping, not slides.",
+    "categories": [
+      {
+        "icon": "server",
+        "title": "Backend",
+        "meta": "Primary specialization",
+        "items": ["Java", "Spring Boot", "Node.js", "Express.js", "Flask (basic)", "RESTful APIs"]
+      },
+      {
+        "icon": "smartphone",
+        "title": "Mobile engineering",
+        "meta": "Cross-platform delivery with Flutter",
+        "items": ["Flutter", "Dart", "Android Studio", "Firebase Firestore", "SQLite (offline storage)"]
+      },
+      {
+        "icon": "layers",
+        "title": "Frontend",
+        "meta": "Web UI when the project needs it",
+        "items": ["HTML", "CSS", "React.js", "JavaScript"]
+      },
+      {
+        "icon": "shield",
+        "title": "Databases & tools",
+        "meta": "Day-to-day engineering toolkit",
+        "items": ["MySQL", "MongoDB", "Git & GitHub", "GitHub Actions", "Postman", "Insomnia"]
+      }
+    ],
+    "tools": ["Python", "C++", "Docker", "DigitalOcean", "cPanel", "Vercel", "Windows", "Kali Linux", "Ubuntu"]
+  },
+  "projects": {
+    "eyebrow": "// projects",
+    "title": "Selected work, built end to end.",
+    "description": "A mix of live production systems and personal builds — each one shipped, not just prototyped.",
+    "filters": [
+      { "label": "All", "value": "all" },
+      { "label": "Web", "value": "web" },
+      { "label": "Mobile", "value": "mobile" },
+      { "label": "Security", "value": "security" }
+    ],
+    "items": [
+      {
+        "title": "Mesob Equb",
+        "category": "mobile",
+        "active": true,
+        "status": "Live in production",
+        "period": "2025 — Present",
+        "summary": "A digital rotating savings and credit association (equb) platform modernizing traditional group-savings workflows.",
+        "role": "Mobile developer, Ashara Software and ICT Solutions",
+        "highlights": [
+          "Telebirr payment integration with staff-verified receipts",
+          "Automated payout tracking and member contribution schedules",
+          "Live lottery-style draws with SMS notifications in 4 languages",
+          "Live in production with 105+ rounds completed to date"
+        ],
+        "tags": ["Flutter", "Dart", "Spring Boot", "Telebirr API"],
+        "links": [{ "label": "Visit site", "href": "https://mesobequb.com" }],
+        "image": "assets/projects/mesob-equb.svg"
+      },
+      {
+        "title": "Ashara Task Manager",
+        "category": "web",
+        "active": true,
+        "status": "Live in production",
+        "period": "2025 — Present",
+        "summary": "A collaborative task management and team operations platform built for structured company workflows.",
+        "role": "Full-stack developer, Ashara Software and ICT Solutions",
+        "highlights": [
+          "Real-time task tracking, state management, and team assignment dashboards",
+          "Role-based access control for administrative oversight",
+          "In active daily use across the team"
+        ],
+        "tags": ["Java", "Spring Boot", "React", "Internal tooling"],
+        "links": [{ "label": "Visit site", "href": "https://task.asharasoftware.com" }],
+        "image": "assets/projects/ashara-task-manager.svg"
+      },
+      {
+        "title": "MaSchool",
+        "category": "mobile",
+        "active": true,
+        "status": "In production",
+        "period": "2024 — Present",
+        "summary": "An education platform for Ethiopian students, built around exam simulations and structured study content.",
+        "role": "Sole mobile & backend developer",
+        "highlights": [
+          "Cross-platform Flutter app used by students preparing for national exams",
+          "Content pipeline for structured exam simulations and study material",
+          "Designed for low-bandwidth, multi-device access"
+        ],
+        "tags": ["Flutter", "Dart", "Firebase", "Mobile"],
+        "links": [{ "label": "GitHub", "href": "https://github.com/FiraolDug" }],
+        "image": "assets/projects/maschool.svg"
+      },
+      {
+        "title": "Ma'ed Platform",
+        "category": "web",
+        "active": true,
+        "status": "Completed",
+        "period": "2024",
+        "summary": "An operations platform for cafe and restaurant workflows, coordinating orders, staff, and admin reporting in real time.",
+        "role": "Full-stack developer",
+        "highlights": [
+          "Order orchestration across kitchen, staff, and admin views",
+          "Admin dashboards for daily operations and reporting",
+          "Event-driven data flow for real-time status updates"
+        ],
+        "tags": ["Node.js", "Express", "MySQL"],
+        "links": [{ "label": "GitHub", "href": "https://github.com/FiraolDug" }],
+        "image": "assets/projects/maed.svg"
+      },
+      {
+        "title": "Yashenifu",
+        "category": "mobile",
+        "active": true,
+        "status": "Completed",
+        "period": "2026",
+        "summary": "A mobile application delivering structured promotional draws, lucky-card UI, and user engagement features.",
+        "role": "Mobile developer",
+        "highlights": [
+          "Custom UI components for draw lists and interactive reward cards",
+          "Smooth layout transitions tuned for mobile displays",
+          "Integrated backend endpoints for verified user participation"
+        ],
+        "tags": ["Flutter", "Dart", "Mobile", "UI/UX"],
+        "links": [{ "label": "GitHub", "href": "https://github.com/FiraolDug" }],
+        "image": "assets/projects/yashenifu.svg"
+      },
+      {
+        "title": "Mistir — File Encryption",
+        "category": "security",
+        "active": true,
+        "status": "Completed",
+        "period": "2023",
+        "summary": "A file encryption tool built with usability for non-technical users as the priority.",
+        "role": "Solo project",
+        "highlights": [
+          "AES-256 based file encryption for protecting sensitive data",
+          "File compression before encryption to reduce storage footprint",
+          "MySQL integration for configuration and metadata management"
+        ],
+        "tags": ["Java", "AES-256", "MySQL", "Cryptography"],
+        "links": [{ "label": "GitHub", "href": "https://github.com/FiraolDug/mistir-file-encryption-software.git" }],
+        "image": "assets/projects/mistir.svg"
+      },
+      {
+        "title": "FiraSec",
+        "category": "security",
+        "active": true,
+        "status": "Completed",
+        "period": "2026",
+        "summary": "A security diagnostic tool designed for multi-platform device management and system identification.",
+        "role": "Lead developer",
+        "highlights": [
+          "Low-level hardware queries using specialized host libraries",
+          "Responsive workstation interface for system diagnostic monitoring",
+          "Device info extraction across connected mobile clients"
+        ],
+        "tags": ["C++", "Flutter", "Linux", "Security"],
+        "links": [{ "label": "GitHub", "href": "https://github.com/FiraolDug" }],
+        "image": "assets/projects/firasec.svg"
+      },
+      {
+        "title": "Odaa Password Manager",
+        "category": "security",
+        "active": true,
+        "status": "Completed",
+        "period": "2025",
+        "summary": "A privacy-focused password manager for secure offline credential storage and generation.",
+        "role": "Solo project",
+        "highlights": [
+          "Zero-knowledge architecture with client-side master-key derivation",
+          "Local encrypted vault storage using AES",
+          "Built-in password strength analyzer and secure random generator"
+        ],
+        "tags": ["Cryptography", "Security", "Dart", "Flutter"],
+        "links": [{ "label": "GitHub", "href": "https://github.com/FiraolDug" }],
+        "image": "assets/projects/odaa.svg"
+      }
+    ]
+  },
+  "experience": {
+    "eyebrow": "// experience",
+    "title": "A trajectory shaped by real, shipped systems.",
+    "items": [
+      {
+        "title": "Full Stack Software Developer",
+        "company": "Ashara Software and ICT Solutions",
+        "period": "Aug 2025 — Present",
+        "type": "Full-time",
+        "points": [
+          "Built Mesob Equb, a bilingual digital equb (rotating savings) platform with Telebirr integration, live draws, and SMS notifications in 4 languages — live in production with 105+ rounds completed.",
+          "Built and deployed Ashara Task Manager, the company's internal task and workflow management system, now in active daily use.",
+          "Designed REST APIs, authentication, and relational database schemas in Java/Spring Boot and Node.js/Express powering both platforms."
+        ]
+      }
+    ]
+  },
+  "education": {
+    "eyebrow": "// education",
+    "title": "Formal training, continuous learning.",
+    "items": [
+      {
+        "title": "B.Sc. in Computer Science",
+        "company": "Hawassa University",
+        "period": "May 2022 — Jun 2025",
+        "points": [
+          "GPA: 3.47/4.0 — Graduated with Distinction.",
+          "Coursework: Software Engineering, OOP, Data Structures & Algorithms (C++), Advanced Programming (Java), Computer Security.",
+          "Additional studies: Artificial Intelligence (Python & Lisp), Web Development (PHP & JavaScript), Abstract Algebra."
+        ]
+      }
+    ],
+    "certifications": [
+      { "title": "Software Engineering Foundations", "issuer": "Coursera", "period": "2024" },
+      { "title": "Cryptography with Java", "issuer": "O'Reilly", "period": "2025" },
+      { "title": "Java Spring Boot & JPA Mastery", "issuer": "O'Reilly", "period": "2025" },
+      { "title": "Cyber Talent Summer Camp", "issuer": "Information Network Security Administration (INSA)", "period": "2025" }
+    ]
+  },
+  "contact": {
+    "eyebrow": "// contact",
+    "title": "Let's build something worth shipping.",
+    "description": "Open to backend, mobile, and full-stack opportunities — as well as focused freelance projects. If it's a real problem worth solving well, I'd like to hear about it.",
+    "channels": [
+      { "label": "Email", "value": "firaoldugassalikassa@gmail.com", "href": "mailto:firaoldugassalikassa@gmail.com", "icon": "mail" },
+      { "label": "Phone", "value": "+251 961 242 949", "href": "tel:+251961242949", "icon": "phone" },
+      { "label": "Location", "value": "Addis Ababa, Ethiopia", "href": null, "icon": "pin" }
+    ]
+  },
+  "footer": {
+    "copy": "Firaol Dugassa. Built with intent.",
+    "socials": [
+      { "label": "GitHub", "href": "https://github.com/FiraolDug" },
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/firaol-dugassa-dev84a913369" },
+      { "label": "Telegram", "href": "https://t.me/firaol_dugassa" }
+    ]
+  }
+}
+
+
+
+
+
+
+
+
+  </script>
 
   <script src="js/icons.js"></script>
   <script src="js/theme.js"></script>

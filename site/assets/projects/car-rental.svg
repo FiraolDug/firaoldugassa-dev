@@ -1,0 +1,35 @@
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Car Rental System with 3D Visualization project cover">
+  <defs>
+    <linearGradient id="mg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1424"/>
+      <stop offset="1" stop-color="#070b14"/>
+    </linearGradient>
+    <pattern id="grid6" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="600" fill="url(#mg6)"/>
+  <rect width="900" height="600" fill="url(#grid6)"/>
+  <circle cx="780" cy="450" r="230" fill="#5fd4d4" fill-opacity="0.08"/>
+  <g transform="translate(540,150)">
+    <ellipse cx="140" cy="210" rx="150" ry="16" fill="#000" fill-opacity="0.35"/>
+    <path d="M20 150 L55 90 Q70 70 100 70 L190 70 Q220 70 235 90 L260 150 Z" fill="#131c34" stroke="#f2b134" stroke-opacity="0.6" stroke-width="2"/>
+    <rect x="20" y="150" width="240" height="34" rx="10" fill="#0f1830" stroke="#f2b134" stroke-opacity="0.6" stroke-width="2"/>
+    <path d="M75 95 L100 95 L92 130 L60 130 Z" fill="#5fd4d4" fill-opacity="0.35"/>
+    <path d="M110 95 L185 95 L192 130 L100 130 Z" fill="#5fd4d4" fill-opacity="0.35"/>
+    <circle cx="70" cy="184" r="24" fill="#0a1122" stroke="#5d6a8a" stroke-width="4"/>
+    <circle cx="70" cy="184" r="9" fill="#f2b134" fill-opacity="0.7"/>
+    <circle cx="210" cy="184" r="24" fill="#0a1122" stroke="#5d6a8a" stroke-width="4"/>
+    <circle cx="210" cy="184" r="9" fill="#f2b134" fill-opacity="0.7"/>
+  </g>
+  <g font-family="'JetBrains Mono', monospace" fill="#93a0bd">
+    <text x="70" y="90" font-size="15" letter-spacing="3" fill="#f2b134">// TEAM PROJECT &#183; TEAM LEAD</text>
+    <text x="70" y="140" font-size="36" fill="#eef2fb" font-weight="700">Car Rental + 3D View</text>
+    <text x="70" y="176" font-size="16">MERN &#183; Stripe &#183; Chapa &#183; Gemini AI</text>
+  </g>
+  <g transform="translate(70,220)" font-family="'JetBrains Mono', monospace" font-size="13" fill="#5fd4d4">
+    <text y="0">$ npm run build</text>
+    <text y="22" fill="#93a0bd">&#8250; role-based admin: ready</text>
+    <text y="44" fill="#93a0bd">&#8250; payments: stripe + chapa</text>
+  </g>
+</svg>

@@ -1,15 +1,15 @@
 <svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ma'ed Platform project cover">
   <defs>
-    <linearGradient id="mg2" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="mgB" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#0d1424"/>
       <stop offset="1" stop-color="#070b14"/>
     </linearGradient>
-    <pattern id="grid2" width="36" height="36" patternUnits="userSpaceOnUse">
+    <pattern id="gridB" width="36" height="36" patternUnits="userSpaceOnUse">
       <path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
     </pattern>
   </defs>
-  <rect width="900" height="600" fill="url(#mg2)"/>
-  <rect width="900" height="600" fill="url(#grid2)"/>
+  <rect width="900" height="600" fill="url(#mgB)"/>
+  <rect width="900" height="600" fill="url(#gridB)"/>
   <circle cx="800" cy="120" r="200" fill="#5fd4d4" fill-opacity="0.10"/>
   <g transform="translate(520,110)">
     <rect x="0" y="0" width="320" height="360" rx="18" fill="#0f1830" stroke="#5fd4d4" stroke-opacity="0.45" stroke-width="2"/>
@@ -36,7 +36,7 @@
   <g font-family="'JetBrains Mono', monospace" fill="#93a0bd">
     <text x="70" y="90" font-size="15" letter-spacing="3" fill="#5fd4d4">// OPERATIONS PLATFORM</text>
     <text x="70" y="140" font-size="42" fill="#eef2fb" font-weight="700">Ma&#8217;ed Platform</text>
-    <text x="70" y="176" font-size="16">Node.js &#183; Prisma &#183; MySQL</text>
+    <text x="70" y="176" font-size="16">Node.js &#183; Express &#183; MySQL</text>
   </g>
   <g transform="translate(70,220)" font-family="'JetBrains Mono', monospace" font-size="13" fill="#5fd4d4">
     <text y="0">$ npm run orders:sync</text>

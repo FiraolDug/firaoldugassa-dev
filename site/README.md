@@ -40,18 +40,44 @@ assets/                      SVG artwork, favicon, resume PDF
 ## Editing content
 
 Everything text-based — your bio, skills, project descriptions, experience,
-contact links — lives in `data/site-content.json`. Edit that file and
-refresh; no other files need to change for routine content updates.
+contact links — lives in `data/site-content.json`. Edit that file, then run:
+
+```bash
+python3 scripts/sync-content.py
+```
+
+This copies the JSON into a small inline `<script>` block inside
+`index.html`. That's the site's *actual* data source at runtime — see
+"Why the content is inlined" below for why. Refresh the page after
+syncing; no other files need to change for routine content updates.
 
 To swap the resume PDF, replace the file in `assets/resume/` and update
 `about.resumeHref` / `hero.actions[].href` in the JSON if the filename
-changes.
+changes (then re-run the sync script).
+
+## Why the content is inlined
+
+Earlier versions of this site loaded `data/site-content.json` with
+`fetch()`. That breaks with a CORS error if you just double-click
+`index.html` and open it from disk (`file://…`) — browsers block
+`fetch()` of local files that way for security reasons. To make the site
+work correctly straight out of the zip, with no server required,
+`index.html` now embeds the JSON directly in a
+`<script type="application/json" id="site-content-data">` block, and
+`js/content.js` reads from that first. `data/site-content.json` is kept
+as the readable, diff-friendly source of truth for editing — just remember
+to run `scripts/sync-content.py` after changing it.
+
+(If `index.html` is ever served over http(s) and that inline block is
+missing for some reason, `content.js` will automatically fall back to
+`fetch('data/site-content.json')` instead — see below.)
 
 ## Running locally
 
-Because `content.js` uses `fetch()` to load the JSON, you need to serve the
-folder over HTTP — opening `index.html` directly via `file://` will fail
-due to browser CORS restrictions on local file fetches.
+Because content is inlined, you can just double-click `index.html` and it
+will work. If you'd rather serve it over HTTP (recommended for testing
+things closer to production, and required if you ever remove the inline
+data and rely on `fetch()` instead):
 
 ```bash
 # from this folder

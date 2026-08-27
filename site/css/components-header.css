@@ -9,17 +9,35 @@
   display: flex;
   align-items: center;
   border-bottom: 1px solid transparent;
-  background: transparent;
-  transition: background var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+  transition: border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
-.header--sticky {
+/* The blur/background lives on its own layer, NOT on .header itself.
+   Reason: backdrop-filter (like transform/filter) makes an element a
+   "containing block" for any position:fixed descendant. The mobile nav
+   drawer is fixed-positioned and lives inside <header> for desktop layout
+   purposes, so if .header carried the filter directly, opening the drawer
+   after scrolling (once .header--sticky applies) would anchor the drawer
+   to the header's own small box instead of the viewport, collapsing it
+   to a sliver. Keeping the filter on this separate, non-ancestor-of-nav
+   layer avoids that entirely while keeping the same visual effect. */
+.header__blur {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity var(--dur) var(--ease);
+}
+.header--sticky .header__blur {
+  opacity: 1;
   background: rgba(7, 11, 20, 0.78);
   backdrop-filter: blur(14px) saturate(140%);
   -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+.header--sticky {
   border-color: var(--border);
   box-shadow: 0 8px 30px rgba(3, 6, 16, 0.25);
 }
-[data-theme='light'] .header--sticky { background: rgba(245, 246, 251, 0.82); }
+[data-theme='light'] .header--sticky .header__blur { background: rgba(245, 246, 251, 0.82); }
 
 .header__container {
   width: 100%;

@@ -7,6 +7,22 @@ const PortfolioContent = (function () {
   'use strict';
 
   async function loadContent() {
+    // Primary source: JSON embedded directly in index.html. This means the
+    // site works when opened straight from disk (double-clicked, no local
+    // server) since it never needs a network/file fetch that the browser's
+    // file:// CORS policy would otherwise block.
+    const inline = document.getElementById('site-content-data');
+    if (inline && inline.textContent.trim()) {
+      try {
+        return JSON.parse(inline.textContent);
+      } catch (err) {
+        console.error('Inline site content is not valid JSON, falling back to fetch:', err);
+      }
+    }
+
+    // Fallback: fetch data/site-content.json. Only works when the site is
+    // served over http(s) (e.g. `python3 -m http.server`, GitHub Pages,
+    // Netlify) — browsers block fetch() of local files opened via file://.
     const res = await fetch('data/site-content.json', { cache: 'no-store' });
     if (!res.ok) throw new Error('Unable to load site content (' + res.status + ')');
     return res.json();
@@ -153,7 +169,6 @@ const PortfolioContent = (function () {
               <p class="skill-card__meta">${s.meta}</p>
             </div>
           </div>
-          <div class="skill-bar"><div class="skill-bar__fill" data-level="${s.level}"></div></div>
           <div class="skill-card__items">
             ${s.items.map((i) => `<span class="tag">${i}</span>`).join('')}
           </div>
@@ -183,7 +198,11 @@ const PortfolioContent = (function () {
 
     const grid = document.getElementById('projects-grid');
     if (grid) {
-      grid.innerHTML = projects.items.map((p) => `
+      // "active" acts as a publish flag: false hides a project entirely
+      // without deleting its data, so it's easy to toggle projects on/off
+      // by editing one field in site-content.json.
+      const visibleItems = projects.items.filter((p) => p.active !== false);
+      grid.innerHTML = visibleItems.map((p) => `
         <article class="project-card card reveal" data-category="${p.category}">
           <div class="project-card__media">
             <span class="badge badge--good project-card__status"><span class="badge__dot"></span>${p.status}</span>
@@ -274,7 +293,7 @@ const PortfolioContent = (function () {
             <div class="contact-channel__icon">${Icons.get(c.icon)}</div>
             <div>
               <div class="contact-channel__label">${c.label}</div>
-              <div class="contact-channel__value">${c.value}</div>
+              <div class="contact-channel__value">${c.value.replace('@', '@<wbr>')}</div>
             </div>
           </${tag}>
         `;

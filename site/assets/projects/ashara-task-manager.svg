@@ -1,0 +1,47 @@
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ashara Task Manager project cover">
+  <defs>
+    <linearGradient id="mg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1424"/>
+      <stop offset="1" stop-color="#070b14"/>
+    </linearGradient>
+    <pattern id="grid5" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="600" fill="url(#mg5)"/>
+  <rect width="900" height="600" fill="url(#grid5)"/>
+  <circle cx="800" cy="120" r="200" fill="#f2b134" fill-opacity="0.09"/>
+  <g transform="translate(540,110)">
+    <rect x="0" y="0" width="300" height="340" rx="16" fill="#0f1830" stroke="#5fd4d4" stroke-opacity="0.45" stroke-width="2"/>
+    <g transform="translate(24,28)" font-family="'JetBrains Mono', monospace">
+      <rect x="0" y="0" width="18" height="18" rx="4" fill="none" stroke="#3ddc97" stroke-width="2"/>
+      <path d="M4 9 L8 13 L15 5" stroke="#3ddc97" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="30" y="4" width="200" height="10" rx="4" fill="#eef2fb" fill-opacity="0.7"/>
+
+      <rect x="0" y="46" width="18" height="18" rx="4" fill="none" stroke="#3ddc97" stroke-width="2"/>
+      <path d="M4 55 L8 59 L15 51" stroke="#3ddc97" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect x="30" y="50" width="160" height="10" rx="4" fill="#eef2fb" fill-opacity="0.55"/>
+
+      <rect x="0" y="92" width="18" height="18" rx="4" fill="none" stroke="#f2b134" stroke-width="2"/>
+      <rect x="30" y="96" width="180" height="10" rx="4" fill="#eef2fb" fill-opacity="0.55"/>
+
+      <rect x="0" y="138" width="18" height="18" rx="4" fill="none" stroke="#5d6a8a" stroke-width="2"/>
+      <rect x="30" y="142" width="140" height="10" rx="4" fill="#eef2fb" fill-opacity="0.35"/>
+
+      <rect x="0" y="196" width="252" height="1" fill="#1c2947"/>
+      <rect x="0" y="216" width="80" height="22" rx="11" fill="#f2b134" fill-opacity="0.18" stroke="#f2b134" stroke-opacity="0.6"/>
+      <text x="40" y="231" text-anchor="middle" font-size="11" fill="#f2b134">In progress</text>
+      <rect x="94" y="216" width="70" height="22" rx="11" fill="#3ddc97" fill-opacity="0.15" stroke="#3ddc97" stroke-opacity="0.6"/>
+      <text x="129" y="231" text-anchor="middle" font-size="11" fill="#3ddc97">Done</text>
+    </g>
+  </g>
+  <g font-family="'JetBrains Mono', monospace" fill="#93a0bd">
+    <text x="70" y="90" font-size="15" letter-spacing="3" fill="#5fd4d4">// INTERNAL TOOLING</text>
+    <text x="70" y="140" font-size="38" fill="#eef2fb" font-weight="700">Ashara Task Manager</text>
+    <text x="70" y="176" font-size="16">Company workflow &#183; internal system</text>
+  </g>
+  <g transform="translate(70,220)" font-family="'JetBrains Mono', monospace" font-size="13" fill="#5fd4d4">
+    <text y="0">$ tasks sync --team</text>
+    <text y="22" fill="#93a0bd">&#8250; used company-wide, daily</text>
+  </g>
+</svg>
