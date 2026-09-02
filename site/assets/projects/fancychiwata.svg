@@ -1,0 +1,41 @@
+<svg width="900" height="600" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="FancyChiwata project cover">
+  <defs>
+    <linearGradient id="mgG" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1424"/>
+      <stop offset="1" stop-color="#070b14"/>
+    </linearGradient>
+    <pattern id="gridG" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M36 0H0V36" fill="none" stroke="#ffffff" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="600" fill="url(#mgG)"/>
+  <rect width="900" height="600" fill="url(#gridG)"/>
+  <circle cx="150" cy="480" r="220" fill="#3ddc97" fill-opacity="0.09"/>
+  <g transform="translate(570,110)">
+    <rect x="0" y="0" width="220" height="140" rx="12" fill="#0f1830" stroke="#3ddc97" stroke-opacity="0.5" stroke-width="2"/>
+    <path d="M0 70 H220 M110 0 V140" stroke="#3ddc97" stroke-opacity="0.35" stroke-width="1.5"/>
+    <circle cx="110" cy="70" r="26" fill="none" stroke="#3ddc97" stroke-opacity="0.5" stroke-width="1.5"/>
+    <circle cx="40" cy="30" r="7" fill="#f2b134"/>
+    <circle cx="80" cy="30" r="7" fill="#f2b134"/>
+    <circle cx="140" cy="30" r="7" fill="#5fd4d4"/>
+    <circle cx="180" cy="30" r="7" fill="#5fd4d4"/>
+    <circle cx="60" cy="110" r="7" fill="#f2b134"/>
+    <circle cx="110" cy="120" r="7" fill="#f2b134" fill-opacity="0.6"/>
+    <circle cx="160" cy="110" r="7" fill="#5fd4d4"/>
+    <g transform="translate(20,160)" font-family="'JetBrains Mono', monospace" font-size="13">
+      <rect x="0" y="0" width="180" height="30" rx="6" fill="#131c34"/>
+      <text x="10" y="20" fill="#eef2fb" fill-opacity="0.8">GW14 &#183; Rank 3</text>
+      <text x="150" y="20" fill="#3ddc97" text-anchor="end">67 pts</text>
+    </g>
+  </g>
+  <g font-family="'JetBrains Mono', monospace" fill="#93a0bd">
+    <text x="70" y="90" font-size="15" letter-spacing="3" fill="#3ddc97">// FANTASY FOOTBALL</text>
+    <text x="70" y="140" font-size="42" fill="#eef2fb" font-weight="700">FancyChiwata</text>
+    <text x="70" y="176" font-size="16">Node.js &#183; React &#183; PostgreSQL</text>
+  </g>
+  <g transform="translate(70,220)" font-family="'JetBrains Mono', monospace" font-size="13" fill="#5fd4d4">
+    <text y="0">$ league standings --update</text>
+    <text y="22" fill="#93a0bd">&#8250; gameweek scores calculated</text>
+    <text y="44" fill="#93a0bd">&#8250; ranks refreshed</text>
+  </g>
+</svg>

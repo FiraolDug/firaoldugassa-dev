@@ -34,13 +34,13 @@
     </g>
   </g>
   <g font-family="'JetBrains Mono', monospace" fill="#93a0bd">
-    <text x="70" y="90" font-size="15" letter-spacing="3" fill="#5fd4d4">// OPERATIONS PLATFORM</text>
+    <text x="70" y="90" font-size="15" letter-spacing="3" fill="#5fd4d4">// MULTI-CAFÉ SAAS PLATFORM</text>
     <text x="70" y="140" font-size="42" fill="#eef2fb" font-weight="700">Ma&#8217;ed Platform</text>
-    <text x="70" y="176" font-size="16">Node.js &#183; Express &#183; MySQL</text>
+    <text x="70" y="176" font-size="16">Node.js &#183; Express &#183; PostgreSQL</text>
   </g>
   <g transform="translate(70,220)" font-family="'JetBrains Mono', monospace" font-size="13" fill="#5fd4d4">
-    <text y="0">$ npm run orders:sync</text>
-    <text y="22" fill="#93a0bd">&#8250; kitchen queue: live</text>
-    <text y="44" fill="#93a0bd">&#8250; admin dashboard: online</text>
+    <text y="0">$ qr scan --table 12</text>
+    <text y="22" fill="#93a0bd">&#8250; cafe + table identified</text>
+    <text y="44" fill="#93a0bd">&#8250; menu session linked</text>
   </g>
 </svg>
