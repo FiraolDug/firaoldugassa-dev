@@ -261,6 +261,10 @@
       {
         "label": "Security",
         "value": "security"
+      },
+      {
+        "label": "Artificial Intelligence",
+        "value": "ai"
       }
     ],
     "items": [
@@ -547,7 +551,7 @@
       },
       {
         "title": "ETHSL",
-        "category": "web",
+        "category": "ai",
         "active": true,
         "status": "In development",
         "period": "2026 — Present",
