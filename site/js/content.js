@@ -49,7 +49,8 @@ const PortfolioContent = (function () {
 
   /* ---------------- Hero ---------------- */
   function renderHero(hero) {
-    setText('hero-eyebrow', hero.eyebrow);
+    const eyebrow = document.getElementById('hero-eyebrow');
+    if (eyebrow) eyebrow.innerHTML = `<span class="badge__dot badge__dot--pulse"></span>${hero.availability}`;
     setText('hero-greeting', hero.greeting);
     setText('hero-name', hero.name);
     setText('hero-role-static', hero.roleStatic);
@@ -62,7 +63,7 @@ const PortfolioContent = (function () {
     if (meta) {
       meta.innerHTML = `
         <span class="hero__meta-item">${Icons.get('pin')}${hero.location}</span>
-        <span class="hero__meta-item">${Icons.get('activity')}${hero.availability}</span>
+        <span class="hero__meta-item">${Icons.get('briefcase')}${hero.eyebrow}</span>
       `;
     }
 
@@ -70,16 +71,16 @@ const PortfolioContent = (function () {
     if (actions) {
       actions.innerHTML = hero.actions.map((a) => {
         const cls = a.variant === 'primary' ? 'btn btn--primary' : a.variant === 'secondary' ? 'btn btn--secondary' : 'btn btn--ghost';
-        const icon = a.download ? Icons.get('download') : a.variant === 'primary' ? Icons.get('arrow') : '';
-        const dl = a.download ? ' download' : '';
-        return `<a class="${cls}" href="${a.href}"${dl}>${icon}<span>${a.label}</span></a>`;
+        const icon = a.tv ? Icons.get('tv') : a.download ? Icons.get('download') : a.variant === 'primary' ? Icons.get('arrow') : '';
+        const extra = (a.download ? ' download' : '') + (a.tv ? ' data-tv-open' : '');
+        return `<a class="${cls}" href="${a.href}"${extra}>${icon}<span>${a.label}</span></a>`;
       }).join('');
     }
 
     const socials = document.getElementById('hero-socials');
     if (socials) {
       socials.innerHTML = hero.socials.map((s) => `
-        <a class="btn--icon" href="${s.href}" target="${s.href.startsWith('http') ? '_blank' : '_self'}" rel="noopener" aria-label="${s.label}">${Icons.get(s.icon)}</a>
+        <a class="icon-btn" href="${s.href}"${s.href.startsWith('http') ? ' target="_blank" rel="noopener"' : ''} aria-label="${s.label}">${Icons.get(s.icon)}</a>
       `).join('');
     }
 
@@ -125,6 +126,9 @@ const PortfolioContent = (function () {
     setText('about-eyebrow', about.eyebrow);
     setText('about-title', about.title);
 
+    const headerResume = document.getElementById('header-resume');
+    if (headerResume) headerResume.href = about.resumeHref;
+
     const grid = document.getElementById('about-grid');
     if (!grid) return;
     grid.innerHTML = `
@@ -144,7 +148,7 @@ const PortfolioContent = (function () {
       </div>
       <div class="about__side reveal">
         <div class="focus-card card">
-          <p class="focus-card__label">// focus</p>
+          <p class="focus-card__label">Focus</p>
           <h3>${about.focus.title}</h3>
           <p>${about.focus.description}</p>
           <a class="btn btn--primary" href="${about.resumeHref}" download>${Icons.get('download')}<span>${about.resumeLabel}</span></a>
@@ -184,49 +188,108 @@ const PortfolioContent = (function () {
   }
 
   /* ---------------- Projects ---------------- */
+  function hostOf(url) {
+    try { return new URL(url).host; } catch (e) { return url; }
+  }
+
+  function renderFeatured(p) {
+    const index = liveProjects.indexOf(p);
+    return `
+      <article class="feature-card card reveal">
+        <button class="feature-card__screen" type="button" data-tv-open="${index}" aria-label="Watch ${p.title} live">
+          <div class="feature-card__frame">
+            <div class="feature-card__chrome"><i></i><i></i><i></i><span>${hostOf(p.live.url)}</span></div>
+            <img src="${p.live.snapshots.desktop}" alt="" loading="lazy" decoding="async" width="1280" height="800">
+          </div>
+          <span class="feature-card__play">${Icons.get('play')}Watch live</span>
+        </button>
+        <div class="feature-card__body">
+          <div class="feature-card__top">
+            <span class="badge badge--good"><span class="badge__dot badge__dot--pulse"></span>${p.status}</span>
+            <span class="meta-line">${p.period}</span>
+          </div>
+          <h3 class="feature-card__title">${p.title}</h3>
+          <p class="meta-line"><b>${p.role}</b></p>
+          <p class="feature-card__summary">${p.summary}</p>
+          <ul class="check-list">${p.highlights.map((h) => `<li>${h}</li>`).join('')}</ul>
+          <div class="tag-row">${p.tags.map((t) => `<span class="tag">${t}</span>`).join('')}</div>
+          <div class="feature-card__actions">
+            <button class="btn btn--primary btn--sm" type="button" data-tv-open="${index}">${Icons.get('tv')}<span>Watch live</span></button>
+            <a class="btn btn--secondary btn--sm" href="${p.live.url}" target="_blank" rel="noopener">${Icons.get('external')}<span>Visit ${hostOf(p.live.url)}</span></a>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  function renderCard(p) {
+    const link = p.links && p.links[0];
+    return `
+      <article class="project-card card reveal" data-category="${p.category}">
+        <div class="project-card__media">
+          <span class="badge project-card__status">${p.status}</span>
+          <img src="${p.image}" alt="" loading="lazy" decoding="async" width="900" height="600">
+        </div>
+        <div class="project-card__body">
+          <div class="project-card__top">
+            <h3 class="project-card__title">${p.title}</h3>
+            <span class="project-card__period">${p.period}</span>
+          </div>
+          <p class="project-card__summary">${p.summary}</p>
+          <details class="project-card__more">
+            <summary>Key highlights ${Icons.get('chevronDown')}</summary>
+            <ul class="check-list">${p.highlights.map((h) => `<li>${h}</li>`).join('')}</ul>
+          </details>
+          <div class="project-card__foot">
+            <div class="tag-row">${p.tags.slice(0, 3).map((t) => `<span class="tag">${t}</span>`).join('')}</div>
+            ${link ? `<a class="project-card__link" href="${link.href}" target="_blank" rel="noopener" aria-label="${p.title} on ${link.label}">${Icons.get('github')}${link.label}</a>` : ''}
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  function initFilters(container, cards) {
+    container.addEventListener('click', (e) => {
+      const btn = e.target.closest('.filter-btn');
+      if (!btn) return;
+      container.querySelectorAll('.filter-btn').forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+      const scope = btn.dataset.filter;
+      cards.forEach((card) => {
+        card.hidden = !(scope === 'all' || card.dataset.category === scope);
+        card.classList.add('reveal--visible');
+      });
+    });
+  }
+
+  // Projects with a `live` block become TV channels (see js/tv.js).
+  let liveProjects = [];
+
   function renderProjects(projects) {
     setText('projects-eyebrow', projects.eyebrow);
     setText('projects-title', projects.title);
     setText('projects-desc', projects.description);
 
-    const filters = document.getElementById('project-filters');
-    if (filters) {
-      filters.innerHTML = projects.filters.map((f, i) => `
-        <button class="filter-btn${i === 0 ? ' filter-btn--active' : ''}" data-filter="${f.value}" role="tab" aria-selected="${i === 0}">${f.label}</button>
-      `).join('');
-    }
+    // "active" acts as a publish flag: false hides a project entirely
+    // without deleting its data.
+    const visible = projects.items.filter((p) => p.active !== false);
+    liveProjects = visible.filter((p) => p.live);
+    const rest = visible.filter((p) => !p.featured);
+
+    const featured = document.getElementById('projects-featured');
+    if (featured) featured.innerHTML = visible.filter((p) => p.featured && p.live).map(renderFeatured).join('');
 
     const grid = document.getElementById('projects-grid');
-    if (grid) {
-      // "active" acts as a publish flag: false hides a project entirely
-      // without deleting its data, so it's easy to toggle projects on/off
-      // by editing one field in site-content.json.
-      const visibleItems = projects.items.filter((p) => p.active !== false);
-      grid.innerHTML = visibleItems.map((p) => `
-        <article class="project-card card reveal" data-category="${p.category}">
-          <div class="project-card__media">
-            <span class="badge badge--good project-card__status"><span class="badge__dot"></span>${p.status}</span>
-            <img src="${p.image}" alt="${p.title} cover graphic" loading="lazy" width="900" height="600">
-          </div>
-          <div class="project-card__body">
-            <div class="project-card__top">
-              <h3 class="project-card__title">${p.title}</h3>
-              <span class="project-card__period">${p.period}</span>
-            </div>
-            <p class="project-card__role">${p.role}</p>
-            <p class="project-card__summary">${p.summary}</p>
-            <ul class="project-card__highlights">
-              ${p.highlights.map((h) => `<li>${h}</li>`).join('')}
-            </ul>
-            <div class="project-card__tags">
-              ${p.tags.map((t) => `<span class="tag">${t}</span>`).join('')}
-            </div>
-          </div>
-          <div class="project-card__links">
-            ${p.links.map((l) => `<a class="btn btn--secondary btn--sm" href="${l.href}" target="_blank" rel="noopener">${Icons.get('github')}<span>${l.label}</span></a>`).join('')}
-          </div>
-        </article>
-      `).join('');
+    if (grid) grid.innerHTML = rest.map(renderCard).join('');
+
+    const filters = document.getElementById('project-filters');
+    if (filters && grid) {
+      filters.innerHTML = projects.filters.map((f, i) => {
+        const count = f.value === 'all' ? rest.length : rest.filter((p) => p.category === f.value).length;
+        if (!count) return '';
+        return `<button class="filter-btn" type="button" data-filter="${f.value}" aria-pressed="${i === 0}">${f.label}<span class="filter-btn__count">${count}</span></button>`;
+      }).join('');
+      initFilters(filters, grid.querySelectorAll('.project-card'));
     }
   }
 
@@ -250,9 +313,9 @@ const PortfolioContent = (function () {
             <div class="timeline-item__role">${item.title}</div>
             <div class="timeline-item__company">${item.company}</div>
           </div>
-          <span class="timeline-item__period">${item.period}${item.type ? ' &middot; ' + item.type : ''}</span>
+          <span class="timeline-item__period">${item.period}${item.type ? ' · ' + item.type : ''}</span>
         </div>
-        <ul class="timeline-item__points">
+        <ul class="check-list">
           ${item.points.map((p) => `<li>${p}</li>`).join('')}
         </ul>
       </div>
@@ -307,7 +370,7 @@ const PortfolioContent = (function () {
     const socials = document.getElementById('footer-socials');
     if (socials) {
       socials.innerHTML = footer.socials.map((s) => `
-        <a class="btn--icon" href="${s.href}" target="_blank" rel="noopener" aria-label="${s.label}">${Icons.get(s.label.toLowerCase())}</a>
+        <a class="icon-btn" href="${s.href}" target="_blank" rel="noopener" aria-label="${s.label}">${Icons.get(s.label.toLowerCase())}</a>
       `).join('');
     }
   }
@@ -336,5 +399,5 @@ const PortfolioContent = (function () {
     return data;
   }
 
-  return { init, loadContent };
+  return { init, loadContent, getLiveProjects: () => liveProjects };
 })();

@@ -1,5 +1,5 @@
 /**
- * animations.js — typing effect, animated counters, skill bars, and the
+ * animations.js — typing effect, animated counters, and the
  * shared scroll-reveal IntersectionObserver. All motion is skipped for
  * users who prefer reduced motion.
  */
@@ -62,10 +62,14 @@ const PortfolioAnimations = (function () {
   }
 
   function initRevealObserver() {
-    const revealables = document.querySelectorAll('.reveal, .stat, .skill-card, .project-card, .timeline-item, .cert-card, .about__text, .about__side, .console');
+    const revealables = document.querySelectorAll('.reveal, .skill-card, .timeline-item, .cert-card');
     if (!revealables.length) return;
 
     revealables.forEach((n) => n.classList.add('reveal'));
+    if (!('IntersectionObserver' in window)) {
+      revealables.forEach((n) => n.classList.add('reveal--visible'));
+      return;
+    }
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -73,25 +77,20 @@ const PortfolioAnimations = (function () {
         const target = entry.target;
         target.classList.add('reveal--visible');
 
-        const counter = target.querySelector ? target.querySelector('.stat-counter') : null;
+        const counter = target.querySelector('.stat-counter');
         if (counter && !counter.dataset.animated) {
           counter.dataset.animated = 'true';
           animateCounter(counter);
         }
-        const bar = target.querySelector ? target.querySelector('.skill-bar__fill') : null;
-        if (bar && !bar.dataset.animated) {
-          bar.dataset.animated = 'true';
-          requestAnimationFrame(() => { bar.style.width = bar.getAttribute('data-level') + '%'; });
-        }
         observer.unobserve(target);
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
     revealables.forEach((n) => observer.observe(n));
   }
 
   function initStaggerDelays() {
-    document.querySelectorAll('.stats__row, .skills__grid, .projects__grid, .about__highlights').forEach((group) => {
+    document.querySelectorAll('.stats, .skills__grid, .projects__grid, .certs__grid').forEach((group) => {
       Array.from(group.children).forEach((child, i) => {
         child.style.setProperty('--reveal-delay', Math.min(i * 70, 280) + 'ms');
       });

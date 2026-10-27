@@ -31,6 +31,14 @@ const Icons = (function () {
     check: svg('<path d="m5 13 4 4 10-10"/>'),
     external: svg('<path d="M14 4h6v6M20 4 10 14M8 6H6a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-2"/>'),
     tool: svg('<path d="M14.7 6.3a4 4 0 0 1-5.4 5.4L4 17l3 3 5.3-5.3a4 4 0 0 1 5.4-5.4L20 6l-3-3-2.3 3.3Z"/>'),
+    play: svg('<path d="M7 4.5v15l12-7.5-12-7.5Z"/>'),
+    tv: svg('<rect x="2.5" y="5" width="19" height="13" rx="2"/><path d="M8 21h8M9 2l3 3 3-3"/>'),
+    monitor: svg('<rect x="2.5" y="3.5" width="19" height="13" rx="2"/><path d="M8 20.5h8M12 16.5v4"/>'),
+    chevronLeft: svg('<path d="m15 6-6 6 6 6"/>'),
+    chevronRight: svg('<path d="m9 6 6 6-6 6"/>'),
+    refresh: svg('<path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/>'),
+    power: svg('<path d="M12 3v8M6.3 6.8a8 8 0 1 0 11.4 0"/>'),
+    lock: svg('<rect x="5" y="11" width="14" height="9.5" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'),
     activity: svg('<path d="M3 12h4l2-7 4 14 2-7h6"/>'),
   };
 

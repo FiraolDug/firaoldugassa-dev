@@ -32,7 +32,7 @@ const GithubPanel = (function () {
     if (profile) {
       profile.innerHTML = `
         <div class="gh-profile__head">
-          <div class="skeleton" style="width:3.4rem;height:3.4rem;border-radius:50%;"></div>
+          <div class="skeleton" style="width:3.25rem;height:3.25rem;border-radius:50%;flex-shrink:0"></div>
           <div style="flex:1">
             <div class="skeleton" style="width:70%;height:1rem;margin-bottom:.5rem;"></div>
             <div class="skeleton" style="width:45%;height:.8rem;"></div>
@@ -98,7 +98,7 @@ const GithubPanel = (function () {
     if (profile) {
       profile.innerHTML = `
         <div class="gh-profile__head">
-          <div class="gh-profile__avatar" style="display:grid;place-items:center;color:var(--amber);font-family:var(--font-mono);">FD</div>
+          <div class="gh-profile__avatar">FD</div>
           <div>
             <div class="gh-profile__name">Firaol Dugassa</div>
             <div class="gh-profile__handle">@FiraolDug</div>

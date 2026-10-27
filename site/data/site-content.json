@@ -31,7 +31,7 @@
     }
   ],
   "hero": {
-    "eyebrow": "// backend-focused full-stack developer",
+    "eyebrow": "Backend-focused full-stack developer",
     "greeting": "Hi, I'm",
     "name": "Firaol Dugassa",
     "roleStatic": "I build",
@@ -51,15 +51,16 @@
         "variant": "primary"
       },
       {
-        "label": "Download resume",
-        "href": "assets/resume/Firaol_Dugassa_Resume.pdf",
+        "label": "Watch live work",
+        "href": "#projects",
         "variant": "secondary",
-        "download": true
+        "tv": true
       },
       {
-        "label": "Get in touch",
-        "href": "#contact",
-        "variant": "ghost"
+        "label": "Download resume",
+        "href": "assets/resume/Firaol_Dugassa_Resume.pdf",
+        "variant": "ghost",
+        "download": true
       }
     ],
     "socials": [
@@ -137,7 +138,7 @@
   ],
   "github": {
     "username": "FiraolDug",
-    "eyebrow": "// live from github",
+    "eyebrow": "Live from GitHub",
     "title": "Straight from the source",
     "description": "This panel pulls live data from the GitHub API — repositories, languages, and recent activity, refreshed on every visit.",
     "fallback": {
@@ -148,7 +149,7 @@
     }
   },
   "about": {
-    "eyebrow": "// about",
+    "eyebrow": "About",
     "title": "Engineering with clarity, scale, and care.",
     "paragraphs": [
       "I'm a backend-focused full-stack developer specializing in Java and Spring Boot, with additional experience in Node.js/Express for backend work and Flutter for cross-platform mobile apps. I care about clear domain models, dependable APIs, and code the next engineer won't have to fight with.",
@@ -176,7 +177,7 @@
     "resumeLabel": "Download resume (PDF)"
   },
   "skills": {
-    "eyebrow": "// skills",
+    "eyebrow": "Skills",
     "title": "A toolkit built for shipping, not slides.",
     "categories": [
       {
@@ -242,7 +243,7 @@
     ]
   },
   "projects": {
-    "eyebrow": "// projects",
+    "eyebrow": "Projects",
     "title": "Selected work, built end to end.",
     "description": "A mix of production systems, SaaS platforms, and personal builds — each focused on solving a real problem end to end.",
     "filters": [
@@ -288,13 +289,17 @@
           "Spring Boot",
           "Telebirr API"
         ],
-        "links": [
-          {
-            "label": "Visit site",
-            "href": "https://mesobequb.com"
+        "links": [],
+        "image": "assets/projects/mesob-equb.svg",
+        "featured": true,
+        "live": {
+          "url": "https://mesobequb.com",
+          "embed": false,
+          "snapshots": {
+            "desktop": "assets/live/mesob-equb-desktop.webp",
+            "mobile": "assets/live/mesob-equb-mobile.webp"
           }
-        ],
-        "image": "assets/projects/mesob-equb.svg"
+        }
       },
       {
         "title": "Ashara Task Manager",
@@ -315,13 +320,17 @@
           "React",
           "Internal tooling"
         ],
-        "links": [
-          {
-            "label": "Visit site",
-            "href": "https://task.asharasoftware.com"
+        "links": [],
+        "image": "assets/projects/ashara-task-manager.svg",
+        "featured": true,
+        "live": {
+          "url": "https://task.asharasoftware.com",
+          "embed": false,
+          "snapshots": {
+            "desktop": "assets/live/ashara-task-manager-desktop.webp",
+            "mobile": "assets/live/ashara-task-manager-mobile.webp"
           }
-        ],
-        "image": "assets/projects/ashara-task-manager.svg"
+        }
       },
       {
         "title": "MaSchool",
@@ -636,7 +645,7 @@
     ]
   },
   "experience": {
-    "eyebrow": "// experience",
+    "eyebrow": "Experience",
     "title": "A trajectory shaped by real, shipped systems.",
     "items": [
       {
@@ -653,7 +662,7 @@
     ]
   },
   "education": {
-    "eyebrow": "// education",
+    "eyebrow": "Education",
     "title": "Formal training, continuous learning.",
     "items": [
       {
@@ -691,7 +700,7 @@
     ]
   },
   "contact": {
-    "eyebrow": "// contact",
+    "eyebrow": "Contact",
     "title": "Let's build something worth shipping.",
     "description": "Open to backend, mobile, and full-stack opportunities — as well as focused freelance projects. If it's a real problem worth solving well, I'd like to hear about it.",
     "channels": [
